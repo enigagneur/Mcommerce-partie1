@@ -118,5 +118,9 @@ public class ProductController {
         }
         return marges;
     }
+    @GetMapping(value = "/Produitstries")
+    public Iterable<Product> afficherProduitsTries(){
+        return productDao.trierProduitsParOrdreAlphabetique();
+    }
 
 }
